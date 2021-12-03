@@ -34,13 +34,12 @@ public class GuessingGameDieringer {
                     "Enter a guess between 1 and 100", "Guessing Game", 3);
             userAnswer = Integer.parseInt(response);
 
-            JOptionPane.showMessageDialog(null, "" + determineGuess(userAnswer, computerNumber, count));
+            JOptionPane.showMessageDialog(null, "" + calculateMessage(userAnswer, computerNumber, count));
             count++;
         }
     }
-
-    // TODO: Refactor / Rename determineGuess to calculateMessage
-    public static String determineGuess(int userAnswer, int computerNumber, int count) {
+    
+    public static String calculateMessage(int userAnswer, int computerNumber, int count) {
         String guessPrompt = "You guessed: " + count;
         // TODO: Instead of "Try Number" which sounds like we should try that as a guess...
         // Say "You've used " + count + guesses.
