@@ -40,10 +40,9 @@ public class GuessingGameDieringer {
     }
     
     public static String calculateMessage(int userAnswer, int computerNumber, int count) {
-        String guessPrompt = "You guessed: " + count;
-        // TODO: Instead of "Try Number" which sounds like we should try that as a guess...
-        // Say "You've used " + count + guesses.
-        // If count is one, use "guess", else use "guesses" HINT: Ternary operator
+        String guessPrompt = "You used: " + count;
+        guessPrompt += (count == 1) ? "guess." : "guesses.";
+        
         if (userAnswer <= 0 || userAnswer > 100) {
             return "Your guess is invalid";
         } else if (userAnswer == computerNumber) {
