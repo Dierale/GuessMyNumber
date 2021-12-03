@@ -41,7 +41,7 @@ public class GuessingGameDieringer {
     
     public static String calculateMessage(int userAnswer, int computerNumber, int count) {
         String guessPrompt = "You used: " + count;
-        guessPrompt += (count == 1) ? "guess." : "guesses.";
+        guessPrompt += (count == 1) ? " guess." : " guesses.";
         
         if (userAnswer <= 0 || userAnswer > 100) {
             return "Your guess is invalid";
