@@ -24,14 +24,16 @@ public class GuessingGameDieringer {
         int count = 1;
 
         while (userAnswer != computerNumber) {
-            // TODO: create 3 local variables for the arguments so we know what they mean
-            // showInputDialog - the first argument is always null (no parent)
-            // message = "Enter a guess between 1 and 100" // what type?
-            // title = "Guessing Game" // what type?
+            // Create response variables
+            String message = "Enter a guess between 1 and 100";
+            String title = "Guessing Game";
+            
             // messageType = JOptionPane.INFORMATION_MESSAGE
-            // Works the same as original 3 but more expressive - this is an example of a what? Hint: enum
+            int messageType = 3;
+            
+            // Print game response to user
             String response = JOptionPane.showInputDialog(null,
-                    "Enter a guess between 1 and 100", "Guessing Game", 3);
+                    message, title, 3);
             userAnswer = Integer.parseInt(response);
 
             JOptionPane.showMessageDialog(null, "" + calculateMessage(userAnswer, computerNumber, count));
