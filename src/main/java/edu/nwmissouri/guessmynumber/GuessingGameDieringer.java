@@ -27,13 +27,11 @@ public class GuessingGameDieringer {
             // Create response variables
             String message = "Enter a guess between 1 and 100";
             String title = "Guessing Game";
-            
-            // messageType = JOptionPane.INFORMATION_MESSAGE
-            int messageType = 3;
+            int messageType = JOptionPane.INFORMATION_MESSAGE;
             
             // Print game response to user
             String response = JOptionPane.showInputDialog(null,
-                    message, title, 3);
+                    message, title, messageType);
             userAnswer = Integer.parseInt(response);
 
             JOptionPane.showMessageDialog(null, "" + calculateMessage(userAnswer, computerNumber, count));
